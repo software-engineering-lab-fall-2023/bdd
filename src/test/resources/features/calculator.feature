@@ -16,3 +16,9 @@ Feature: Calculator
       | 1     | 12     | 13     |
       | -1    | 6      | 5      |
       | 2     | 2      | 4      |
+
+
+  Scenario: Calculate sqrt a/b
+    Given Two input values, 1 and 1
+    When I calculate the custom function on the two values
+    Then I expect the result 1
