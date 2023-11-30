@@ -6,7 +6,7 @@ import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import org.junit.Assert;
 
-public class AddStepdefs {
+public class CalculatorStepdefs {
     private Calculator calculator;
     private int value1;
     private int value2;
@@ -33,5 +33,11 @@ public class AddStepdefs {
     @Then("^I expect the result ([-+]?\\d+)$")
     public void iExpectTheResult(int arg0) {
         Assert.assertEquals(arg0, result);
+    }
+
+    @When("^I calculate the custom function on the two values$")
+    public void iCalculateTheCustomFunctionOnTheTwoValues() {
+        result = calculator.customFunc(value1, value2);
+        System.out.println(result);
     }
 }
